@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home
+
+{% endblock %}
+
+{% block navbar %}
+        {% include 'navbar.html.twig' %}
+{% endblock %}
+
+{% block body %}
+<div class="image-gallery">
+    {% for image in images %}
+        {% if loop.index <= 2 %}
+            {% if loop.index == 1 %}
+                <div class="gallery-item first-row img1">
+            {% elseif loop.index == 2 %}
+                <div class="gallery-item first-row img2">
+            {% endif %}
+        {% else %}
+            <div class="gallery-item">
+        {% endif %}
+            <img src="{{ image.imageUrl }}" alt="{{ image.imageText }}" class="gallery-image">
+            <div class="caption">
+                {{ image.imageText }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block footer %}
+        {% include 'footer.html.twig' %}
+{% endblock %}
+ 
+

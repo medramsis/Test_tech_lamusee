@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+  }
+
+body{
+    background: #fff;
+
+}
+.header_menu{
+width: 100%;
+min-height: 100vh;
+background-color: white;
+}
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+    background-color: white;
+}
+
+.logo{
+padding: 20px;
+margin: 0;}
+
+.logo img{
+    display: flex;
+
+    width: 100px;
+    height: 50px;
+}
+
+.navItems{
+    display: flex;
+
+}
+.navItems li {
+    list-style: none;
+    margin: 0 15px;
+
+}
+.navItems li a {
+
+    font-size: 15px ;
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+    
+}
+.links a {
+ font-size: 20px;
+ color: black;
+ margin: 25px 10px ;
+}
+
+.banner{
+    width: 100%;
+}
+.banner-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+
+    font-size: 80px;
+}
+
+.container{
+    margin: 130px;
+}
+/* Image gallery styles */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* Add some gap between images */
+}
+
+.gallery-item {
+    flex-basis: calc(30% - 10px);
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.first-row {
+    flex-basis: calc(50% - 10px );
+    flex-grow: 1;
+}
+
+.img1{
+    flex-basis: 25%;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 500px;
+    object-fit:cover;
+}
+
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+}
+
+footer {
+    background-color: #dddddd;
+    color: Black;
+    padding: 20px 0;
+    justify-content: flex-start;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-menu {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-menu h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 5px;
+}
+
+.footer-menu ul li a {
+    font-display: left;
+    font-size: 10px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+  /* For screens up to 768px width */
+
+@media (max-width: 768px) {
+    .navItems {
+        width: 30%;
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .logo img {
+      width: 80px; 
+      height: auto;
+    }
+  
+    .links a {
+        display: flex;
+      margin: 15px 5px; 
+    }
+  
+    .gallery-item,
+    .first-row {
+      flex-basis: calc(50% - 10px); 
+    }
+    .container{
+        margin: 0%;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        letter-spacing: 3px;
+    
+        font-size: 40px;
+    }
+  }
+  
+  /* For screens up to 576px width */
+  @media (max-width: 576px) {
+    .logo img {
+        width: 80px; /* Reduce the size of the logo for smaller screens */
+        height: auto; /* Keep the logo's aspect ratio */
+      }
+    
+      .navItems li {
+        margin: 5px 0; /* Adjust the margin of each navigation item */
+      }
+    
+      .links a {
+        margin: 10px 5px; /* Adjust the margin between social links */
+      }
+    .banner-text {
+      font-size: 60px; /* Adjust the banner text font size for smaller screens */
+    }
+  
+    .gallery-item,
+    .first-row {
+      flex-basis: 100%; /* Make each gallery item take 100% width for the smallest screens */
+    }
+    .container{
+        margin: 0%;
+    }
+    .banner-text {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        letter-spacing: 3px;
+    
+        font-size: 30px;
+    }
+  }

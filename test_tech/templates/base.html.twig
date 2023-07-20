@@ -1,0 +1,44 @@
+{# templates/base.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome To L'Amusee{% endblock %}</title>
+    <!-- Other meta tags, stylesheets, etc. -->
+
+    <!-- Import the CSS file -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+    {# Navbar #}
+    {% block navbar %}
+        {% include 'navbar.html.twig' %}
+    {% endblock %}
+
+    {# Banner #}
+    {% block banner %}
+<div class="banner">
+        <img  class="banner"src="{{ asset('Images/banner.png') }}" alt="Banner Image">  
+        <div class="banner-text">
+            <p>Nos Clients</p>
+        </div>
+    </div>    {% endblock %}
+
+    {# Body #}
+    <div class="container">
+        {% block body %}
+         {% include 'index.html.twig' %}
+
+         {% endblock %}
+    </div>
+
+    {# Footer #}
+    {% block footer %}
+        {% include 'footer.html.twig' %}
+
+    {% endblock %}
+</body>
+</html>
